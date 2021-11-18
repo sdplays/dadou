@@ -1,3 +1,6 @@
+html{
+         background: rgb(34,34,34);
+         background: linear-gradient(126deg, rgba(34,34,34,1) 38%, rgba(42,42,71,0.779131635564382) 78%, rgba(39,39,78,0.779131635564382) 80%, rgba(39,39,78,0.779131635564382) 94%); 
 text{
         font-family:Helvetica, Arial, sans-serif;
         font-size:11px;
