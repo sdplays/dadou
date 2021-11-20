@@ -106,10 +106,7 @@ var padding = {top:20, right:40, bottom:0, left:0},
 
                     source.setAttribute('src', videos[0]);
                     source.setAttribute('type', 'video/wbem');
-		    console.log({
-                    src: source.getAttribute('src'),
-                    type: source.getAttribute('type'),
-                    });
+		    
 
                     video.appendChild(source);
                     video.play();
