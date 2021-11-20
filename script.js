@@ -104,7 +104,7 @@ var padding = {top:20, right:40, bottom:0, left:0},
 	            var video = document.getElementById('video');
 		    var source = null
                     if (source != null) {
-			    source.remove()
+			    source.remove() }
 		    else{
 		    
 		    
