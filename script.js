@@ -103,9 +103,13 @@ var padding = {top:20, right:40, bottom:0, left:0},
                     console.log(data[picked].question)
 	            var video = document.getElementById('video');
                     var source = document.createElement('source');
-		    var num = data[picked].value -1
+		    var num = 0
+		    videos.forEach(addf)
+		    function addf() {
+		     num = data[picked].value -1 ;
+		     return num }
 
-		     video.appendChild(source);
+		    video.appendChild(source);
                     video.play();
                     source.setAttribute('src', videos[num] );
                     source.setAttribute('type', 'video/mp4');
