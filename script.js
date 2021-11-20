@@ -104,12 +104,17 @@ var padding = {top:20, right:40, bottom:0, left:0},
 	            var video = document.getElementById('video');
                     var source = document.createElement('source');
 
+		     video.appendChild(source);
+                    video.play();
                     source.setAttribute('src', videos[0]);
                     source.setAttribute('type', 'video/wbem');
+		    console.log({
+                     src: source.getAttribute('src'),
+                     type: source.getAttribute('type'),
+                                });
 		    
 
-                    video.appendChild(source);
-                    video.play();
+                   
                     /* Comment the below line for restrict spin to sngle time */
                     container.on("click", spin);
                 });
