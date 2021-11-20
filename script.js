@@ -45,7 +45,7 @@ var padding = {top:20, right:40, bottom:0, left:0},
             .attr("class", "slice");
             
         arcs.append("path")
-            .attr("fill", function(d, i){ return color(i); })
+            .attr("fill", "#454545"; })
             .attr("d", function (d) { return arc(d); });
         // add the text
         arcs.append("text").attr("transform", function(d){
