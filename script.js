@@ -107,12 +107,12 @@ var padding = {top:20, right:40, bottom:0, left:0},
 		    videos.forEach(addf)
 		    function addf() {
 		     num = data[picked].value -1 ;
-		     return num }
+		    
 
 		    video.appendChild(source);
                     video.play();
                     source.setAttribute('src', videos[num] );
-                    source.setAttribute('type', 'video/mp4');
+                    source.setAttribute('type', 'video/mp4'); }
 		    console.log({
                      src: source.getAttribute('src'),
                      type: source.getAttribute('type'),
