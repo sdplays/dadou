@@ -8,8 +8,10 @@ var padding = {top:20, right:40, bottom:0, left:0},
             oldpick = [],
             color = d3.scale.category20();//category20c()
             //randomNumbers = getRandomNumbers();
-        //http://osric.com/bingo-card-generator/?title=HTML+and+CSS+BINGO!&words=padding%2Cfont-family%2Ccolor%2Cfont-weight%2Cfont-size%2Cbackground-color%2Cnesting%2Cbottom%2Csans-serif%2Cperiod%2Cpound+sign%2C%EF%B9%A4body%EF%B9%A5%2C%EF%B9%A4ul%EF%B9%A5%2C%EF%B9%A4h1%EF%B9%A5%2Cmargin%2C%3C++%3E%2C{+}%2C%EF%B9%A4p%EF%B9%A5%2C%EF%B9%A4!DOCTYPE+html%EF%B9%A5%2C%EF%B9%A4head%EF%B9%A5%2Ccolon%2C%EF%B9%A4style%EF%B9%A5%2C.html%2CHTML%2CCSS%2CJavaScript%2Cborder&freespace=true&freespaceValue=Web+Design+Master&freespaceRandom=false&width=5&height=5&number=35#results
-        var data = [
+        
+//http://osric.com/bingo-card-generator/?title=HTML+and+CSS+BINGO!&words=padding%2Cfont-family%2Ccolor%2Cfont-weight%2Cfont-size%2Cbackground-color%2Cnesting%2Cbottom%2Csans-serif%2Cperiod%2Cpound+sign%2C%EF%B9%A4body%EF%B9%A5%2C%EF%B9%A4ul%EF%B9%A5%2C%EF%B9%A4h1%EF%B9%A5%2Cmargin%2C%3C++%3E%2C{+}%2C%EF%B9%A4p%EF%B9%A5%2C%EF%B9%A4!DOCTYPE+html%EF%B9%A5%2C%EF%B9%A4head%EF%B9%A5%2Ccolon%2C%EF%B9%A4style%EF%B9%A5%2C.html%2CHTML%2CCSS%2CJavaScript%2Cborder&freespace=true&freespaceValue=Web+Design+Master&freespaceRandom=false&width=5&height=5&number=35#results
+    const videos ["camera-1.webm" , "camera-1.webm"]
+    var data = [
                     {"label":"Dell LAPTOP",  "value":1,  "question":"iktib1"}, // padding
                     {"label":"IMAC PRO",  "value":2,  "question":"iktib2",}, //font-family
                     {"label":"SUZUKI",  "value":3,  "question":"iktib3"}, //color
@@ -92,7 +94,20 @@ var padding = {top:20, right:40, bottom:0, left:0},
                     //populate question
                     d3.select("#question h1")
                         .text(data[picked].question);
+		    var video = document.getElementById('video');
+                    var source = document.createElement('source');
+
+                    source.setAttribute('src', videos[0]);
+                    source.setAttribute('type', 'video/wbem');
+		    console.log({
+  src: source.getAttribute('src'),
+  type: source.getAttribute('type'),
+});
+
+                    video.appendChild(source);
+                    video.play();
                     oldrotation = rotation;
+		    
               
                     /* Get the result value from object "data" */
                     console.log(data[picked].value)
