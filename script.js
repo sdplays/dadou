@@ -130,8 +130,7 @@ videoPlay(i);
                    
                     /* Comment the below line for restrict spin to sngle time */
                     container.on("click", spin);
-                });
-        }
+                
         //make arrow
         svg.append("g")
             .attr("transform", "translate(" + (w + padding.left + padding.right) + "," + ((h/2)+padding.top) + ")")
