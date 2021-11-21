@@ -123,7 +123,7 @@ var padding = {top:20, right:40, bottom:0, left:0},
         					 e = window.event; 
      						 }
       					count++;
-      					$(mp4Vid).attr('src', data[picked].video);
+      					source.setAttribute('src', data[picked].video);
       					player.load();
       					player.play();
    }
