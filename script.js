@@ -13,7 +13,7 @@ var padding = {top:20, right:40, bottom:0, left:0},
     var count = 10 
     const videos = ["v1.mp4","v2.mp4","v3.mp4","v4.mp4" ,"v5.mp4","v6.mp4","v7.mp4","v8.mp4" ,"v9.mp4","v10.mp4"  ]
     var data = [
-                    {"label":"Eye",  "value":1,  "question":"iktib1", "video":"v1.mp4"}, // padding
+                    {"label":"Eye",  "value":1,  "question":"", "video":"v1.mp4"}, // padding
                     {"label":"Door",  "value":2,  "question":"iktib2","video":"v2.mp4"}, //font-family
                     {"label":"Heaven",  "value":3,  "question":"iktib3","video":"v3.mp4"}, //color
                     {"label":"Evil",  "value":4,  "question":"iktib4","video":"v4.mp4"}, //font-weight
@@ -46,7 +46,7 @@ var padding = {top:20, right:40, bottom:0, left:0},
             .attr("class", "slice");
             
         arcs.append("path")
-            .attr("fill",function(d, i){ return color('grey') ; })
+            .attr("fill",function(d, i){ return color('black') ; })
             .attr("d", function (d) { return arc(d); });
         // add the text
         arcs.append("text").attr("transform", function(d){
@@ -81,9 +81,7 @@ var padding = {top:20, right:40, bottom:0, left:0},
             if(oldpick.indexOf(picked) !== -1){
                 d3.select(this).call(spin);
                 return;
-            } else {
-                oldpick.push(picked);
-            }
+            } 
             rotation += 90 - Math.round(ps/2);
             vis.transition()
                 .duration(3000)
