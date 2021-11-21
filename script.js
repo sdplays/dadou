@@ -95,15 +95,12 @@ var padding = {top:20, right:40, bottom:0, left:0},
                     //populate question
                     d3.select("#question h1")
                         .text(data[picked].question);
-
                     oldrotation = rotation;
-		    
               
                     /* Get the result value from object "data" */
                     console.log(data[picked].value)
                     console.log(data[picked].question)
-	           
-		    document.getElementById("video").setAttribute("src",data[picked].video)
+		    		    document.getElementById("video").setAttribute("src",data[picked].video)
 		    function videoPlay(videoNum)
     {
 document.getElementById("video").setAttribute("src",videos[videoNum]);
@@ -120,6 +117,11 @@ videoPlay(i);
 else{
 videoPlay(i);
 }	    		    	
+
+                    /* Comment the below line for restrict spin to sngle time */
+                    container.on("click", spin);
+                });
+        }
 		    
                     
                			
@@ -130,9 +132,6 @@ videoPlay(i);
                    
                     /* Comment the below line for restrict spin to sngle time */
            
-     container.on("click", spin);
-	       });
-        }
 
         //make arrow
         svg.append("g")
