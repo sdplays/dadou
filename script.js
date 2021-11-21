@@ -13,16 +13,16 @@ var padding = {top:20, right:40, bottom:0, left:0},
     var count = 10 
     const videos = ["v1.mp4","v2.mp4","v3.mp4","v4.mp4" ,"v5.mp4","v6.mp4","v7.mp4","v8.mp4" ,"v9.mp4","v10.mp4"  ]
     var data = [
-                    {"label":"Eye",  "value":1,  "question":"", "video":"v1.mp4"}, // padding
-                    {"label":"Door",  "value":2,  "question":"iktib2","video":"v2.mp4"}, //font-family
-                    {"label":"Heaven",  "value":3,  "question":"iktib3","video":"v3.mp4"}, //color
-                    {"label":"Evil",  "value":4,  "question":"iktib4","video":"v4.mp4"}, //font-weight
-                    {"label":"Scary",  "value":5,  "question":"iktib5","video":"v5.mp4"}, //font-size
-                    {"label":"weird",  "value":6,  "question":"iktib6","video":"v6.mp4"}, //background-color
-                    {"label":"Run",  "value":7, "question":"ikitb7","video":"v7.mp4"}, //nesting
-                    {"label":"LAND",  "value":8,  "question":"iktib8","video":"v8.mp4"}, //bottom
-                    {"label":"Product",  "value":9,  "question":"iktib9","video":"v9.mp4"}, //sans-serif
-                    {"label":"beaux", "value":10, "question":"iktib10","video":"v10.mp4"},
+                    {"label":"Eye",  "value":1,  "question":"“Le rêve est le phénomène que nous n'observons que pendant son absence. Le verbe rêver n'a presque pas de présent. Je rêve, tu rêves.” Paul Valery", "video":"v1.mp4"}, // padding
+                    {"label":"Door",  "value":2,  "question":"“Certes, un rêve de beignet, c’est un rêve, pas un beignet. Mais un rêve de voyage, c’est déjà un voyage.”","video":"v2.mp4"}, //font-family
+                    {"label":"Heaven",  "value":3,  "question":" Les rêves ont rarement la vie longue, mais ils l'ont intense. Citation de Anne Barratin ; Les pensées in Œuvres posthumes (1920)","video":"v3.mp4"}, //color
+                    {"label":"Evil",  "value":4,  "question":" Fais de ta vie un rêve, et d'un rêve une réalité. Citation de Antoine de Saint-Exupéry ; Cahiers de Saint-Exupéry (1900-1944)","video":"v4.mp4"}, //font-weight
+                    {"label":"Scary",  "value":5,  "question":"J'aime mieux rêver mon âme que vivre ma vie. Citation de Gustave Thibon ; Vous serez comme des dieux (1959)","video":"v5.mp4"}, //font-size
+                    {"label":"weird",  "value":6,  "question":" Réfléchir sur ce que c'est que vivre : c'est rêver sa vie. Citation de Gabriel Marcel ; Être et avoir (1918-1933)","video":"v6.mp4"}, //background-color
+                    {"label":"Run",  "value":7, "question":" La vie est un rêve, fais en une réalité. Citation de Mère Teresa ; Une pensée par jour avec Mère Teresa (2005)","video":"v7.mp4"}, //nesting
+                    {"label":"LAND",  "value":8,  "question":"Le meilleur de ma vie a passé comme un rêve. Citation de Alfred de Musset ; Silvia, À Madame ***, le 18 décembre 1839.","video":"v8.mp4"}, //bottom
+                    {"label":"Product",  "value":9,  "question":" Les rêves sont de la vie sans souvenir. Citation de Henry de Montherlant ; Les carnets (1932-1934)","video":"v9.mp4"}, //sans-serif
+                    {"label":"beaux", "value":10, "question":"S'il existe une réalité qui dépasse le rêve, c'est ceci : Vivre. Citation de Victor Hugo ; Les misérables (1862)","video":"v10.mp4"},
         ];
         var svg = d3.select('#chart')
             .append("svg")
