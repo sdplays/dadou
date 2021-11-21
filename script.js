@@ -106,7 +106,7 @@ var padding = {top:20, right:40, bottom:0, left:0},
 		    document.getElementById("mp4source").setAttribute("src",data[picked].video)
 		    function videoPlay(videoNum)
     {
-document.getElementById("mp4source").setAttribute("src",videos[videoNum]);
+document.getElementById("video").setAttribute("src",videos[videoNum]);
 document.getElementById("video").load();
 document.getElementById("video").play();
     }
