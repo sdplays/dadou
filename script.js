@@ -116,11 +116,11 @@ videoPlay(i);
 }
 else{
 videoPlay(i);
-}	    		    	
+};	    		    	
 
                     /* Comment the below line for restrict spin to sngle time */
                     container.on("click", spin);
-                })
+                });
         }
 		    
                     
