@@ -46,7 +46,7 @@ var padding = {top:20, right:40, bottom:0, left:0},
             .attr("class", "slice");
             
         arcs.append("path")
-            .attr("fill",function(d, i){ return color('black') ; })
+            .attr("fill", 'grey')
             .attr("d", function (d) { return arc(d); });
         // add the text
         arcs.append("text").attr("transform", function(d){
@@ -64,12 +64,7 @@ var padding = {top:20, right:40, bottom:0, left:0},
             
             
             //all slices have been seen, all done
-            console.log("OldPick: " + oldpick.length, "Data length: " + data.length);
-            if(oldpick.length == data.length){
-                console.log("done");
-                
-                return;
-            }
+            
             var  ps       = 360/data.length ,
                  pieslice = Math.round(1440/data.length),
                  rng      = Math.floor((Math.random() * 1440) + 360);
@@ -88,8 +83,7 @@ var padding = {top:20, right:40, bottom:0, left:0},
                 .attrTween("transform", rotTween)
                 .each("end", function(){
                     //mark question as seen
-                    d3.select(".slice:nth-child(" + (picked + 1) + ") path")
-                        .attr("fill", "#111");
+                    
                     //populate question
                     d3.select("#question h1")
                         .text(data[picked].question);
