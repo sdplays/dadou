@@ -108,9 +108,11 @@ var padding = {top:20, right:40, bottom:0, left:0},
 		    source.setAttribute('id', 'mp4source' );
                     
                     source.setAttribute('type', 'video/mp4');
+		    source.setAttribute('src', data[picked].video);
 		    video.appendChild(source);
 		    
 		    var count=1;
+		    
    			var player=document.getElementById('video');
    			var mp4Vid = document.getElementById('mp4source');
   			 player.addEventListener('ended',myHandler,false);
@@ -123,7 +125,7 @@ var padding = {top:20, right:40, bottom:0, left:0},
         					 e = window.event; 
      						 }
       					count++;
-      					source.setAttribute('src', data[picked].video);
+      					$(mp4Vid).attr('src', data[picked].video);
       					player.load();
       					player.play();
    }
