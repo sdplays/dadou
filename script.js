@@ -125,11 +125,14 @@ videoPlay(i);
                			
    
 		     
-}})}	  
+  
 
                    
                     /* Comment the below line for restrict spin to sngle time */
-                    container.on("click", spin);
+           
+     container.on("click", spin);
+	       });
+        }
 
         //make arrow
         svg.append("g")
