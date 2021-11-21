@@ -13,16 +13,16 @@ var padding = {top:20, right:40, bottom:0, left:0},
     var count = 10 
     const videos = ["v1.mp4","v2.mp4","v3.mp4","v4.mp4" ,"v5.mp4","v6.mp4","v7.mp4","v8.mp4" ,"v9.mp4","v10.mp4"  ]
     var data = [
-                    {"label":"Dell LAPTOP",  "value":1,  "question":"iktib1", "video":"v1.mp4"}, // padding
-                    {"label":"IMAC PRO",  "value":2,  "question":"iktib2","video":"v2.mp4"}, //font-family
-                    {"label":"SUZUKI",  "value":3,  "question":"iktib3","video":"v3.mp4"}, //color
-                    {"label":"HONDA",  "value":4,  "question":"iktib4","video":"v4.mp4"}, //font-weight
-                    {"label":"FERRARI",  "value":5,  "question":"iktib5","video":"v5.mp4"}, //font-size
-                    {"label":"APARTMENT",  "value":6,  "question":"iktib6","video":"v6.mp4"}, //background-color
-                    {"label":"IPAD PRO",  "value":7, "question":"ikitb7","video":"v7.mp4"}, //nesting
+                    {"label":"Eye",  "value":1,  "question":"iktib1", "video":"v1.mp4"}, // padding
+                    {"label":"Door",  "value":2,  "question":"iktib2","video":"v2.mp4"}, //font-family
+                    {"label":"Heaven",  "value":3,  "question":"iktib3","video":"v3.mp4"}, //color
+                    {"label":"Evil",  "value":4,  "question":"iktib4","video":"v4.mp4"}, //font-weight
+                    {"label":"Scary",  "value":5,  "question":"iktib5","video":"v5.mp4"}, //font-size
+                    {"label":"weird",  "value":6,  "question":"iktib6","video":"v6.mp4"}, //background-color
+                    {"label":"Run",  "value":7, "question":"ikitb7","video":"v7.mp4"}, //nesting
                     {"label":"LAND",  "value":8,  "question":"iktib8","video":"v8.mp4"}, //bottom
-                    {"label":"MOTOROLLA",  "value":9,  "question":"iktib9","video":"v9.mp4"}, //sans-serif
-                    {"label":"BMW", "value":10, "question":"iktib10","video":"v10.mp4"},
+                    {"label":"Product",  "value":9,  "question":"iktib9","video":"v9.mp4"}, //sans-serif
+                    {"label":"beaux", "value":10, "question":"iktib10","video":"v10.mp4"},
         ];
         var svg = d3.select('#chart')
             .append("svg")
@@ -46,7 +46,7 @@ var padding = {top:20, right:40, bottom:0, left:0},
             .attr("class", "slice");
             
         arcs.append("path")
-            .attr("fill",function(d, i){ return color(i) ; })
+            .attr("fill",function(d, i){ return color('grey') ; })
             .attr("d", function (d) { return arc(d); });
         // add the text
         arcs.append("text").attr("transform", function(d){
@@ -62,12 +62,12 @@ var padding = {top:20, right:40, bottom:0, left:0},
         container.on("click", spin);
         function spin(d){
             
-            container.on("click", null);
+            
             //all slices have been seen, all done
             console.log("OldPick: " + oldpick.length, "Data length: " + data.length);
             if(oldpick.length == data.length){
                 console.log("done");
-                container.on("click", null);
+                
                 return;
             }
             var  ps       = 360/data.length ,
@@ -150,7 +150,7 @@ videoPlay(i);
             .attr("x", 0)
             .attr("y", 15)
             .attr("text-anchor", "middle")
-            .text("TOURNEr")
+            .text("spin")
             .style({"font-weight":"bold", "font-size":"30px"});
         
         
