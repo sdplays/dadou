@@ -22,7 +22,7 @@ var padding = {top:20, right:40, bottom:0, left:0},
                     {"label":"IPAD PRO",  "value":7, "question":"ikitb7","video":"v7.mp4"}, //nesting
                     {"label":"LAND",  "value":8,  "question":"iktib8","video":"v8.mp4"}, //bottom
                     {"label":"MOTOROLLA",  "value":9,  "question":"iktib9","video":"v9.mp4"}, //sans-serif
-                    {"label":"BMW", "value":10, "question":"iktib10","video":"v10.mp4"}
+                    {"label":"BMW", "value":10, "question":"iktib10","video":"v10.mp4"},
         ];
         var svg = d3.select('#chart')
             .append("svg")
@@ -70,7 +70,7 @@ var padding = {top:20, right:40, bottom:0, left:0},
                 container.on("click", null);
                 return;
             }
-            var  ps       = 360/data.length,
+            var  ps       = 360/data.length ,
                  pieslice = Math.round(1440/data.length),
                  rng      = Math.floor((Math.random() * 1440) + 360);
                 
@@ -102,21 +102,21 @@ var padding = {top:20, right:40, bottom:0, left:0},
                     console.log(data[picked].question)
 		    		    document.getElementById("video").setAttribute("src",data[picked].video)
 		    function videoPlay(videoNum)
-    {
-document.getElementById("video").setAttribute("src",videos[videoNum]);
-document.getElementById("video").load();
-document.getElementById("video").play();
-    }
-          document.getElementById('video').addEventListener('ended',myHandler,false);
+    				{
+			document.getElementById("video").setAttribute("src",videos[videoNum]);
+			document.getElementById("video").load();
+			document.getElementById("video").play();
+    				}
+          	document.getElementById('video').addEventListener('ended',myHandler,false);
 function myHandler() {
-i++;
+i++ ;
 if(i == (Count-1)){
 i = 0;
 videoPlay(i);
 }
 else{
 videoPlay(i);
-};	    		    	
+}	    		    	
 
                     /* Comment the below line for restrict spin to sngle time */
                     container.on("click", spin);
