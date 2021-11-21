@@ -101,16 +101,15 @@ var padding = {top:20, right:40, bottom:0, left:0},
                     /* Get the result value from object "data" */
                     console.log(data[picked].value)
                     console.log(data[picked].question)
-	            var video = document.getElementById('video');
+	           
 		    
 		    
-                   
-		    var source = document.createElement('source');	    		    	
-		    source.setAttribute('id', 'mp4source' );
+          	    		    	
+		    
                     
-                    source.setAttribute('type', 'video/mp4');
-		    source.setAttribute('src', data[picked].video);
-		    video.appendChild(source);
+                    
+		    
+		    
 		    
 		    var count=1;
 		    
