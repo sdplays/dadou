@@ -103,6 +103,7 @@ var padding = {top:20, right:40, bottom:0, left:0},
                     console.log(data[picked].question)
 	            var video = document.getElementById('video');
 		    
+		    
                    
 		    var source = document.createElement('source');	    		    	
 		    source.setAttribute('id', 'mp4source' );
@@ -115,9 +116,7 @@ var padding = {top:20, right:40, bottom:0, left:0},
 		    
    			var player=document.getElementById('video');
    			var mp4Vid = document.getElementById('mp4source');
-  			 player.addEventListener('ended',myHandler,false);
-
-   			function myHandler(e)
+		    function myhandler(e)
    					{
 
      				 if(!e) 
@@ -127,8 +126,11 @@ var padding = {top:20, right:40, bottom:0, left:0},
       					count++;
       					$(mp4Vid).attr('src', data[picked].video);
       					player.load();
-      					player.play();
-   }
+      					player.play(); }
+  			 player.addEventListener('ended',myhandler,false);
+
+   			
+   
 		     
 		    console.log({
                      src: source.getAttribute('src'),
