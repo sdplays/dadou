@@ -103,19 +103,19 @@ var padding = {top:20, right:40, bottom:0, left:0},
                     console.log(data[picked].question)
 	            var video = document.getElementById('video');
 		    var source = null
-                    for (let index = 0; index <= count ; index++){if (source != null) {
+                    if (source != null) {
 			    source.remove() ; source.setAttribute('src', null );
 		             }
 		    
 		    
 		    
 			else{    
-		    var source = document.createElement('source');	    		    	
+		     source = document.createElement('source');	    		    	
 		    
                     source.setAttribute('src', data[picked].video );
                     source.setAttribute('type', 'video/mp4');
 		    video.appendChild(source);
-		    video.play();}}
+		    video.play();}
 		     
 		    console.log({
                      src: source.getAttribute('src'),
