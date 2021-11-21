@@ -103,19 +103,30 @@ var padding = {top:20, right:40, bottom:0, left:0},
                     console.log(data[picked].question)
 	            var video = document.getElementById('video');
 		    var source = null
-                    if (source != null) {
-			    source.remove() ; source.setAttribute('src', null );
-		             }
-		    
-		    
-		    
-			else{    
+                   
 		     source = document.createElement('source');	    		    	
-		    
-                    source.setAttribute('src', data[picked].video );
+		    source.setAttribute('id', 'mp4source' );
+                    
                     source.setAttribute('type', 'video/mp4');
 		    video.appendChild(source);
-		    video.play();}
+		    
+		    var count=1;
+   			var player=document.getElementById('video');
+   			var mp4Vid = document.getElementById('mp4source');
+  			 player.addEventListener('ended',myHandler,false);
+
+   			function myHandler(e)
+   					{
+
+     				 if(!e) 
+      						{
+        					 e = window.event; 
+     						 }
+      					count++;
+      					$(mp4Vid).attr('src', data[picked].video);
+      					player.load();
+      					player.play();
+   }
 		     
 		    console.log({
                      src: source.getAttribute('src'),
