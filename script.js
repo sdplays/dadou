@@ -10,7 +10,8 @@ var padding = {top:20, right:40, bottom:0, left:0},
             //randomNumbers = getRandomNumbers();
         
 //http://osric.com/bingo-card-generator/?title=HTML+and+CSS+BINGO!&words=padding%2Cfont-family%2Ccolor%2Cfont-weight%2Cfont-size%2Cbackground-color%2Cnesting%2Cbottom%2Csans-serif%2Cperiod%2Cpound+sign%2C%EF%B9%A4body%EF%B9%A5%2C%EF%B9%A4ul%EF%B9%A5%2C%EF%B9%A4h1%EF%B9%A5%2Cmargin%2C%3C++%3E%2C{+}%2C%EF%B9%A4p%EF%B9%A5%2C%EF%B9%A4!DOCTYPE+html%EF%B9%A5%2C%EF%B9%A4head%EF%B9%A5%2Ccolon%2C%EF%B9%A4style%EF%B9%A5%2C.html%2CHTML%2CCSS%2CJavaScript%2Cborder&freespace=true&freespaceValue=Web+Design+Master&freespaceRandom=false&width=5&height=5&number=35#results
-    var count = 10
+    var count = 10 
+    const videos = ["v1.mp4","v2.mp4","v3.mp4","v4.mp4" ,"v5.mp4","v6.mp4","v7.mp4","v8.mp4" ,"v9.mp4","v10.mp4"  ]
     var data = [
                     {"label":"Dell LAPTOP",  "value":1,  "question":"iktib1", "video":"v1.mp4"}, // padding
                     {"label":"IMAC PRO",  "value":2,  "question":"iktib2","video":"v2.mp4"}, //font-family
@@ -103,39 +104,28 @@ var padding = {top:20, right:40, bottom:0, left:0},
                     console.log(data[picked].question)
 	           
 		    
-		    
-          	    		    	
+		    function videoPlay(videoNum)
+    {
+document.getElementById("mp4source").setAttribute("src",videos[videoNum]);
+document.getElementById("video").load();
+document.getElementById("video").play();
+    }
+          document.getElementById('video').addEventListener('ended',myHandler,false);
+function myHandler() {
+i++;
+if(i == (Count-1)){
+i = 0;
+videoPlay(i);
+}
+else{
+videoPlay(i);
+}	    		    	
 		    
                     
-                    
-		    
-		    
-		    
-		    var count=1;
-		    
-   			var player=document.getElementById('video');
-   			var mp4Vid = document.getElementById('mp4source');
-		    function myhandler(e)
-   					{
-
-     				 if(!e) 
-      						{
-        					 e = window.event; 
-     						 }
-      					count++;
-      					$(mp4Vid).attr('src', data[picked].video);
-      					player.load();
-      					player.play(); }
-  			 player.addEventListener('ended',myhandler,false);
-
-   			
+               			
    
 		     
-		    console.log({
-                     src: source.getAttribute('src'),
-                     type: source.getAttribute('type'),
-                                });
-		    
+		  
 
                    
                     /* Comment the below line for restrict spin to sngle time */
